@@ -11,29 +11,23 @@ public class Problem3
 	public String Problem3() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		List<Integer> primes = new ArrayList<Integer>();
-		List<Integer> primeFactors = new ArrayList<Integer>();
 		
 		long bigNo = 600851475143l;
 		double sqrtBigNo = Math.sqrt(bigNo);
-		
+		int N=1;
 		primes.add(2);
 		for(int i = 3; i <= sqrtBigNo; i++) {
 			if(isPrime(i, primes)) {
-				if(bigNo%i == 0) {
-					primeFactors.add(i);
-				}
+				N = i;
 			}
-		}
-		int N = 1;
-		for(Integer prime : primeFactors) {
-			N = (prime > N) ? prime : N;
 		}
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + N + "\nTime: " + (endTime - startTime);
 	}
 
 	private boolean isPrime(int value, List<Integer> primes) {
-		for (int i = 0; i < primes.size(); i++) {
+		int sqrtValue = (int)Math.sqrt(value);
+		for (int i = 0; i < sqrtValue; i++) {
 			if ((value % primes.get(i)) == 0) {
 				return false;
 			}
