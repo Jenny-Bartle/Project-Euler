@@ -1,10 +1,9 @@
 package com.jenny.projecteuler;
-import android.app.*;
-import android.os.*;
+import android.os.SystemClock;
 
-public class Problem17
+public class Problem17 implements Problem
 {
-	public String Problem17() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		long unitsSum = sumUnitLengths();
 		long teensSum = sumTeenLengths();
@@ -14,6 +13,11 @@ public class Problem17
 		long digitsSum = hundredsSum + hundredSum *10 + andSum + oneThousandLength;
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + digitsSum + "\nTime: " + (endTime - startTime);
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Number letter counts";
 	}
 
 	private long sumHundreds() {

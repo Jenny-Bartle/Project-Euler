@@ -1,11 +1,11 @@
 package com.jenny.projecteuler;
-import java.math.*;
-import android.app.*;
-import android.os.*;
+import android.os.SystemClock;
 
-public class Problem15
+import java.math.BigInteger;
+
+public class Problem15 implements Problem
 {
-	public String Problem15() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		BigInteger fac20 = factorial(20, 1);
 		BigInteger fac40 = factorial(40, 20);
@@ -13,6 +13,11 @@ public class Problem15
 		// 40!/(20!*20!)
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + noRoutes.longValue() + "\nTime: " + (endTime - startTime);
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Lattice paths";
 	}
 
 	private BigInteger factorial(long startNo, long endNo) {

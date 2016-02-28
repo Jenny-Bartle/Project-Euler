@@ -1,11 +1,10 @@
 package com.jenny.projecteuler;
-import android.app.*;
 import android.os.*;
 
-public class Problem18
+public class Problem18 implements Problem
 {
 
-	public String Problem18() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		long[] runningTotals = numbers[numbers.length-1];
 		for(int row = numbers.length-2; row >= 0; row--) {
@@ -14,6 +13,11 @@ public class Problem18
 
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + runningTotals[0] + "\nTime: " + (endTime - startTime);
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Maximum path sum I";
 	}
 
 	private long[] increaseRunningTotals(long[] runningTotals, int row) {

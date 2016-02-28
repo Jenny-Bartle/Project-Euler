@@ -20,14 +20,10 @@ public class DisplayAnswerActivity extends AppCompatActivity {
 		try {
 			Class<Problem> c = (Class<Problem>) Class.forName(message);
 			Problem problem = (Problem) c.newInstance();
-			// Create the text view
-			TextView due = (TextView)findViewById(R.id.QuestionBox);
-			TextView textView = new TextView(this);
-			textView.setText(message);
-
-			// Set the text view as the activity layout
-			setContentView(textView);
-			// setTitle(MainActivity.TITLE);
+			TextView questionText = (TextView)findViewById(R.id.QuestionBox);
+			TextView answerText = (TextView)findViewById(R.id.AnswerBox);
+			questionText.setText(problem.getProblemDescriptor());
+			answerText.setText(problem.getAnswer());
 		} catch (Exception e) {
 
 		}

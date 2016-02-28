@@ -1,11 +1,10 @@
 package com.jenny.projecteuler;
-import android.app.*;
 import android.os.*;
 import java.util.*;
 
-public class Problem19
+public class Problem19 implements Problem
 {
-	public String Problem19() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		int firstSundays = 0;
 		for(int year = 1901; year <=2000; year++) {
@@ -21,4 +20,10 @@ public class Problem19
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + firstSundays + "\nTime: " + (endTime - startTime);
 	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Counting Sundays";
+	}
+
 }

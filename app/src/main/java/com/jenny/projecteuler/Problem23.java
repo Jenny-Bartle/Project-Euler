@@ -1,13 +1,13 @@
 package com.jenny.projecteuler;
 
+import android.os.SystemClock;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import android.os.SystemClock;
+public class Problem23 implements Problem {
 
-public class Problem23 {
-
-	public String Problem23() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		int UPPER_BOUND = 28124;
 		List<Integer> abundantNumbers = new ArrayList<Integer>();
@@ -37,6 +37,11 @@ public class Problem23 {
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + notAbundantNumberSum + "\nTime: "
 				+ (endTime - startTime);
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Non-abundant sums";
 	}
 
 	private int properDivisorsSum(int findDivisors) {

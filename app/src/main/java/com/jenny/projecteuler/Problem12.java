@@ -1,5 +1,4 @@
 package com.jenny.projecteuler;
-import android.app.*;
 import android.os.*;
 
 public class Problem12 implements Problem

@@ -1,21 +1,23 @@
 package com.jenny.projecteuler;
-import android.app.*;
 import android.os.*;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.*;
+
 import java.math.*;
 
-public class Problem16
+public class Problem16 implements Problem
 {
 
-	public String Problem16() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		BigInteger powerTwo = BigInteger.valueOf(2);
 		powerTwo = powerTwo.pow(1000);
 		long digitsSum = sumDigits(powerTwo);
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + digitsSum + "\nTime: " + (endTime - startTime);
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Power digit sum";
 	}
 
 	private long sumDigits(BigInteger number) {

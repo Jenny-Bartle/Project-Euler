@@ -1,11 +1,9 @@
 package com.jenny.projecteuler;
-import java.math.*;
-import android.app.*;
 import android.os.*;
 
-public class Problem21
+public class Problem21 implements Problem
 {
-	public String Problem21() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		int sumOfAmicableNumbers = 0;
 		for (int i =200; i < 10000; i++) {
@@ -17,6 +15,11 @@ public class Problem21
 		}
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + sumOfAmicableNumbers + "\nTime: " + (endTime - startTime);
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Amicable numbers";
 	}
 
 	private int properDivisorsSum(int findDivisors) {

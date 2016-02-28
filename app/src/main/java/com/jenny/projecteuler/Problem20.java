@@ -3,10 +3,10 @@ import android.os.SystemClock;
 
 import java.math.BigInteger;
 
-public class Problem20
+public class Problem20 implements Problem
 {
 
-	public String Problem20() {
+	public String getAnswer() {
 		long startTime = SystemClock.currentThreadTimeMillis();
 		BigInteger fac100 = factorial(100);
 		long digits = sumDigits(fac100);
@@ -22,6 +22,11 @@ public class Problem20
 			total += Long.parseLong(String.valueOf(charNum));
 		}
 		return total;
+	}
+
+	@Override
+	public String getProblemDescriptor() {
+		return "Factorial digit sum";
 	}
 
 	private BigInteger factorial(long startNo) {
