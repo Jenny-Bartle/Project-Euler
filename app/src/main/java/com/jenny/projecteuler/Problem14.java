@@ -35,7 +35,7 @@ public class Problem14 implements Problem
 
 	@Override
 	public String getProblemDescriptor() {
-		return "Summation of primes";
+		return "Longest Collatz Sequence";
 	}
 	
 	private int calculateCollatzLength(long startNo, int[] toCalculate) {

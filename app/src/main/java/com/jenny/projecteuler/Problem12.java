@@ -18,7 +18,7 @@ public class Problem12 implements Problem
 
 	@Override
 	public String getProblemDescriptor() {
-		return "Summation of primes";
+		return "Highly divisible triangular number";
 	}
 	
 	private int getNumberOfFactors(long number) {

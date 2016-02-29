@@ -39,7 +39,7 @@ public class Problem11 implements Problem
 
 	@Override
 	public String getProblemDescriptor() {
-		return "Summation of primes";
+		return "Largest product in a grid";
 	}
 	
 	private long checkDiagonalRight(long[] numberArray, int i){

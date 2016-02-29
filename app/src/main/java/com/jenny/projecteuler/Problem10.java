@@ -1,8 +1,8 @@
 package com.jenny.projecteuler;
+import android.os.SystemClock;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import android.os.SystemClock;
 
 public class Problem10 implements Problem
 {
@@ -13,7 +13,7 @@ public class Problem10 implements Problem
 		primes.add(2);
 
 		for (int i = 3; i <2000000; i = i+2) {
-			if(isPrime(i, primes)) {
+			if(Utilities.isPrime(i, primes)) {
 				answer += i;
 			}
 		}
@@ -21,21 +21,6 @@ public class Problem10 implements Problem
 		long endTime = SystemClock.currentThreadTimeMillis();
 		return "Value: " + answer + "\nTime: " + (endTime - startTime);
 	}
-
-	private boolean isPrime(int value, List<Integer> primes) {
-		double sqrt = Math.sqrt(value);
-		for (int i = 0; i < primes.size(); i++) {
-			if(primes.get(i) > sqrt) {
-				break;
-			}
-			if ((value % primes.get(i)) == 0) {
-				return false;
-			}
-		}
-		primes.add(value);
-		return true;
-	}
-
 
 	@Override
 	public String getProblemDescriptor() {

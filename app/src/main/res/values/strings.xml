@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Project Euler</string>
     <string name="output_string">Result</string>
-    <string name="heading_string">Click a project Euler problem to get the answer</string>
+    <string name="intro_string">Click a project Euler problem to get the answer</string>
 
 </resources>
