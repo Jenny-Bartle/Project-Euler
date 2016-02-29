@@ -107,6 +107,16 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="onClickGetProblem"
+            android:tag="com.jenny.projecteuler.Problem9"
+            android:text="Prob 9" />
+
         <Button
             android:id="@+id/button10"
             android:layout_width="0dp"
@@ -134,6 +144,12 @@
             android:tag="com.jenny.projecteuler.Problem12"
             android:text="Prob 12" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <Button
             android:id="@+id/button14"
             android:layout_width="0dp"
@@ -143,12 +159,6 @@
             android:tag="com.jenny.projecteuler.Problem14"
             android:text="Prob 14" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
         <Button
             android:id="@+id/button15"
             android:layout_width="0dp"
@@ -176,6 +186,14 @@
             android:tag="com.jenny.projecteuler.Problem17"
             android:text="Prob 17" />
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <Button
             android:id="@+id/button18"
             android:layout_width="0dp"
@@ -184,13 +202,6 @@
             android:onClick="onClickGetProblem"
             android:tag="com.jenny.projecteuler.Problem18"
             android:text="Prob 18" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <Button
             android:id="@+id/button19"
@@ -218,15 +229,6 @@
             android:onClick="onClickGetProblem"
             android:tag="com.jenny.projecteuler.Problem21"
             android:text="Prob 21" />
-
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="match_parent"
-            android:onClick="onClickGetProblem"
-            android:tag="com.jenny.projecteuler.Problem23"
-            android:text="Prob 23" />
 
     </LinearLayout>
 
